@@ -10,6 +10,7 @@ public class Main {
         System.out.println(totalWaysToSum2(numbers, requiredSum));
     }
 
+    /** Contract Solution of Total Ways to Sum II */
     public static int totalWaysToSum2(int[] numbers, int rSum) {
         numbers = Arrays.stream(numbers).filter(num -> num <= rSum).toArray(); // Removes all numbers which are bigger than rSum // Stopping Condition #1
         if (rSum == 0) return 1; // Stopping Condition #2
