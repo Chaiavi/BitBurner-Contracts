@@ -1,6 +1,6 @@
 package org.bitburner;
 
-import org.bitburner.contracts.BiggestPrimalFactor;
+import org.bitburner.contracts.AlgorithmicStockTrader1;
 
 public class Main {
     public static void main(String[] args) {
@@ -8,8 +8,11 @@ public class Main {
 //        int requiredSum = 80;
 //        System.out.println(TotalWaysToSum2.totalWaysToSum2(numbers, requiredSum));
 
-        Stopwatch stopwatch = new Stopwatch();
-        System.out.println(BiggestPrimalFactor.findBiggestPrimalFactor(293668864));
-        System.out.println(stopwatch.getElapsedTime());
+//        Stopwatch stopwatch = new Stopwatch();
+//        System.out.println(BiggestPrimalFactor.findBiggestPrimalFactor(293668864));
+//        System.out.println(stopwatch.getElapsedTime());
+
+        int[] numbers = {85,179,47,91,29,168,47,78,66,101,105,120,14,105,143,175,40,170,71,49,105,98,68,193,174,108,1,132,142,142,173,182,195,156,108,130,168};
+        System.out.println(AlgorithmicStockTrader1.findBiggestGap(numbers));
     }
 }
