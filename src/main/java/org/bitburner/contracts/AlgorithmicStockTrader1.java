@@ -1,6 +1,7 @@
 package org.bitburner.contracts;
 
 public class AlgorithmicStockTrader1 {
+    /** Finds the biggest gap in an array of numbers */
     public static int findBiggestGap(int[] numbers) {
         int gap = 0;
         for (int i = 1; i < numbers.length; i++) {
