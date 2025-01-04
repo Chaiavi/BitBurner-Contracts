@@ -6,7 +6,8 @@ import java.util.Arrays;
 
 public class Main {
     public static void main(String[] args) {
-        String digits = "115322151";
-        System.out.println(Arrays.toString(GenerateIPAddresses.generateIPAddresses(digits, 0)));
+        System.out.println("Started Main");
+        int number = 822027495;
+        System.out.println(BiggestPrimalFactor.findBiggestPrimalFactor(number));
     }
 }

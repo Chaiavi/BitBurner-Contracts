@@ -6,12 +6,14 @@ import java.util.List;
 public class BiggestPrimalFactor {
     public static int findBiggestPrimalFactor(int givenNumber) {
         List<Integer> primalFactors = new ArrayList<>();
-        List<Integer> primalNumbers = findPrimalNumbersTill(givenNumber);
+        List<Integer> primalNumbers = findPrimalNumbersTill((int) Math.sqrt(givenNumber));
+        System.out.println("Found " + primalNumbers.size() + " Primal numbers till " + givenNumber);
 
         while (givenNumber > 1) {
             int primalFactor = getFirstPrimalFactor(givenNumber, primalNumbers);
             primalFactors.add(primalFactor);
             givenNumber /= primalFactor;
+            System.out.println("First Primal Number is: " + primalFactor + " (Continuing with " + givenNumber + ")");
         }
 
         int biggestPrimalFactor = Integer.MIN_VALUE;
@@ -44,7 +46,8 @@ public class BiggestPrimalFactor {
                 }
             }
 
-            if (isPrimal) primalNumbers.add(currentNumber);
+            if (isPrimal)
+                primalNumbers.add(currentNumber);
         }
 
         return primalNumbers;
